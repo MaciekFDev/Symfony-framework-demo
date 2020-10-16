@@ -36,7 +36,7 @@
                 {% for i in 1..paginator.lastPage %}
                     {% if i == paginator.currentPage %}
                         <li class="active"><span>{{ i }} <span class="sr-only">{{ 'paginator.current'|trans }}</span></span></li>
-                    {% else %}
+                    {% elseif (i == 1) or (i == 2) or (i == paginator.lastPage) or (i == paginator.lastPage -1) or (i == paginator.lastPage /2) or (i == paginator.currentPage -1) or (i == paginator.currentPage +1) %}
                         <li><a href="{{ path('blog_index_paginated', {page: i, tag: tagName}) }}">{{ i }}</a></li>
                     {% endif %}
                 {% endfor %}
