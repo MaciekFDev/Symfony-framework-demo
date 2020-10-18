@@ -99,86 +99,90 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
         // line 10
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 10, $this->source); })()), "author", [], "any", false, false, false, 10), "fullName", [], "any", false, false, false, 10), "html", null, true);
         echo "</span>
+        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>";
+        // line 11
+        echo 1;
+        echo "</span>
     </p>
 
     ";
-        // line 13
-        echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 13, $this->source); })()), "content", [], "any", false, false, false, 13)));
+        // line 14
+        echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 14, $this->source); })()), "content", [], "any", false, false, false, 14)));
         echo "
 
     ";
-        // line 15
+        // line 16
         echo twig_include($this->env, $context, "blog/_post_tags.html.twig");
         echo "
 
     <div id=\"post-add-comment\" class=\"well\">
         ";
-        // line 24
+        // line 25
         echo "        ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 25
+            // line 26
             echo "            ";
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\BlogController::commentForm", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 25, $this->source); })()), "id", [], "any", false, false, false, 25)]));
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\BlogController::commentForm", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 26, $this->source); })()), "id", [], "any", false, false, false, 26)]));
             echo "
         ";
         } else {
-            // line 27
+            // line 28
             echo "            <p>
                 <a class=\"btn btn-success\" href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login", ["redirect_to" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "request", [], "any", false, false, false, 28), "pathInfo", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login", ["redirect_to" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "request", [], "any", false, false, false, 29), "pathInfo", [], "any", false, false, false, 29)]), "html", null, true);
             echo "\">
                     <i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> ";
-            // line 29
+            // line 30
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.sign_in"), "html", null, true);
             echo "
                 </a>
                 ";
-            // line 31
+            // line 32
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("post.to_publish_a_comment"), "html", null, true);
             echo "
             </p>
         ";
         }
-        // line 34
+        // line 35
         echo "    </div>
 
     <h3>
         <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> ";
-        // line 37
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("post.num_comments", ["count" => twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 37, $this->source); })()), "comments", [], "any", false, false, false, 37))]), "html", null, true);
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("post.num_comments", ["count" => twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 38, $this->source); })()), "comments", [], "any", false, false, false, 38))]), "html", null, true);
         echo "
     </h3>
 
     ";
-        // line 40
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 40, $this->source); })()), "comments", [], "any", false, false, false, 40));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 41, $this->source); })()), "comments", [], "any", false, false, false, 41));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 41
+            // line 42
             echo "        <div class=\"row post-comment\">
             <a name=\"comment_";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 42), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 43), "html", null, true);
             echo "\"></a>
             <h4 class=\"col-sm-3\">
                 <strong>";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "author", [], "any", false, false, false, 44), "fullName", [], "any", false, false, false, 44), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["comment"], "author", [], "any", false, false, false, 45), "fullName", [], "any", false, false, false, 45), "html", null, true);
             echo "</strong> ";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("post.commented_on"), "html", null, true);
             echo "
                 ";
-            // line 48
+            // line 49
             echo "                <strong>";
-            echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatDateTime($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "publishedAt", [], "any", false, false, false, 48), "medium", "short", "", "UTC"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Twig\Extra\Intl\IntlExtension']->formatDateTime($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "publishedAt", [], "any", false, false, false, 49), "medium", "short", "", "UTC"), "html", null, true);
             echo "</strong>
             </h4>
             <div class=\"col-sm-9\">
                 ";
-            // line 51
-            echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, $context["comment"], "content", [], "any", false, false, false, 51)));
+            // line 52
+            echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, $context["comment"], "content", [], "any", false, false, false, 52)));
             echo "
             </div>
         </div>
@@ -186,10 +190,10 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 55
+            // line 56
             echo "        <div class=\"post-comment\">
             <p>";
-            // line 56
+            // line 57
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("post.no_comments"), "html", null, true);
             echo "</p>
         </div>
@@ -206,7 +210,7 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
 
     }
 
-    // line 61
+    // line 62
     public function block_sidebar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -216,37 +220,37 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 62
+        // line 63
         echo "    ";
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("edit", (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 62, $this->source); })()))) {
-            // line 63
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("edit", (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 63, $this->source); })()))) {
+            // line 64
             echo "        <div class=\"section\">
             <a class=\"btn btn-lg btn-block btn-success\" href=\"";
-            // line 64
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 64, $this->source); })()), "id", [], "any", false, false, false, 64)]), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 65, $this->source); })()), "id", [], "any", false, false, false, 65)]), "html", null, true);
             echo "\">
                 <i class=\"fa fa-edit\" aria-hidden=\"true\"></i> ";
-            // line 65
+            // line 66
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.edit_post"), "html", null, true);
             echo "
             </a>
         </div>
     ";
         }
-        // line 69
+        // line 70
         echo "
     ";
-        // line 73
+        // line 74
         echo "    ";
         $this->displayParentBlock("sidebar", $context, $blocks);
         echo "
 
     ";
-        // line 75
+        // line 76
         echo $this->extensions['App\Twig\SourceCodeExtension']->showSourceCode($this->env, $this->getTemplateName());
         echo "
     ";
-        // line 76
+        // line 77
         echo twig_include($this->env, $context, "blog/_rss.html.twig");
         echo "
 ";
@@ -270,7 +274,7 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
 
     public function getDebugInfo()
     {
-        return array (  250 => 76,  246 => 75,  240 => 73,  237 => 69,  230 => 65,  226 => 64,  223 => 63,  220 => 62,  210 => 61,  193 => 56,  190 => 55,  181 => 51,  174 => 48,  168 => 44,  163 => 42,  160 => 41,  155 => 40,  149 => 37,  144 => 34,  138 => 31,  133 => 29,  129 => 28,  126 => 27,  120 => 25,  117 => 24,  111 => 15,  106 => 13,  100 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  254 => 77,  250 => 76,  244 => 74,  241 => 70,  234 => 66,  230 => 65,  227 => 64,  224 => 63,  214 => 62,  197 => 57,  194 => 56,  185 => 52,  178 => 49,  172 => 45,  167 => 43,  164 => 42,  159 => 41,  153 => 38,  148 => 35,  142 => 32,  137 => 30,  133 => 29,  130 => 28,  124 => 26,  121 => 25,  115 => 16,  110 => 14,  104 => 11,  100 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -285,6 +289,7 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
     <p class=\"post-metadata\">
         <span class=\"metadata\"><i class=\"fa fa-calendar\"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
         <span class=\"metadata\"><i class=\"fa fa-user\"></i> {{ post.author.fullName }}</span>
+        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ 1 }}</span>
     </p>
 
     {{ post.content|markdown_to_html|sanitize_html }}
@@ -352,6 +357,6 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
     {{ show_source_code(_self) }}
     {{ include('blog/_rss.html.twig') }}
 {% endblock %}
-", "blog/post_show.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\blog\\post_show.html.twig");
+", "blog/post_show.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\blog\\post_show.html.twig");
     }
 }

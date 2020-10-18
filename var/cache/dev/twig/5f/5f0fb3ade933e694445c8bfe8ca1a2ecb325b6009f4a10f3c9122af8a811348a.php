@@ -115,6 +115,6 @@ class __TwigTemplate_dd1edf5fe4007e40abadd7aca2ccdc1163484afc3e4b702cce13023718c
         </div>
     </div>
 </div>
-", "blog/_delete_post_confirmation.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\blog\\_delete_post_confirmation.html.twig");
+", "blog/_delete_post_confirmation.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\blog\\_delete_post_confirmation.html.twig");
     }
 }

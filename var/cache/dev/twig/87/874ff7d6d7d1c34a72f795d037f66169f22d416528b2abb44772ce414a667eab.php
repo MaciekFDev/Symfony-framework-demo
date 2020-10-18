@@ -245,6 +245,6 @@ class __TwigTemplate_78aaef6fbf1c8f8b4792880ab284ac6b589afc5d76b245d36089247bf0d
         </div>
     </div>
 {% endblock %}
-", "default/homepage.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\default\\homepage.html.twig");
+", "default/homepage.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\default\\homepage.html.twig");
     }
 }

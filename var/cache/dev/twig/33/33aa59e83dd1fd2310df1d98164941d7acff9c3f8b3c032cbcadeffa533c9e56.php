@@ -471,6 +471,6 @@ class __TwigTemplate_da8cd418a497431103689434a34d6741472d6ea38b4170ab51d0e60b865
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Veteran\\my_project\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

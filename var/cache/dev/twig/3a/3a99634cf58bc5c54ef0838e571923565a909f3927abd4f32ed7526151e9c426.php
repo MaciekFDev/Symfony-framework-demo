@@ -146,6 +146,6 @@ class __TwigTemplate_7537c4c67e4ce780bfb3c30114a1645174bd76a691478fd74c05e4c3c29
         {% endfor %}
     </div>
 {% endif %}
-", "default/_flash_messages.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\default\\_flash_messages.html.twig");
+", "default/_flash_messages.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\default\\_flash_messages.html.twig");
     }
 }

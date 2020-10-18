@@ -400,6 +400,6 @@ class __TwigTemplate_fad6f23c60cf7f1007567dbddf569ca45a9b9bf5156cdcea749597db989
 
     {{ show_source_code(_self) }}
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\security\\login.html.twig");
     }
 }

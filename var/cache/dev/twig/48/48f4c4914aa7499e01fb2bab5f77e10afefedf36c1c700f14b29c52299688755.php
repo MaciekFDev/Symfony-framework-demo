@@ -143,6 +143,6 @@ class __TwigTemplate_53b0190c7cc476907711120b13a3ef6046138e96e1433db5a4d09e40f46
         </a>
     {% endif %}
 {{ form_end(form) }}
-", "admin/blog/_form.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\admin\\blog\\_form.html.twig");
+", "admin/blog/_form.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\admin\\blog\\_form.html.twig");
     }
 }

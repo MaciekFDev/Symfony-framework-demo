@@ -111,6 +111,6 @@ class __TwigTemplate_97c3a8255e6f24ba85239d052a65be3feb3ee6132c1ad5ca5f7bbb5ec75
     </p>
 {% endif %}
 
-", "blog/_post_tags.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\blog\\_post_tags.html.twig");
+", "blog/_post_tags.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\blog\\_post_tags.html.twig");
     }
 }

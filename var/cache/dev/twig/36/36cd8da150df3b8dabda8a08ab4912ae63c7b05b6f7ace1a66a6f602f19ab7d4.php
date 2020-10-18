@@ -175,6 +175,6 @@ class __TwigTemplate_5fa57bff4c4c5157f5396e6d32b5893d9474e6677920fe258d4fa0dd264
         </div>
     </div>
 </div>
-", "debug/source_code.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\debug\\source_code.html.twig");
+", "debug/source_code.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\debug\\source_code.html.twig");
     }
 }

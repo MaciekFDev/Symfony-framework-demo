@@ -199,6 +199,6 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
 
     {{ show_source_code(_self) }}
 {% endblock %}
-", "admin/blog/edit.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\admin\\blog\\edit.html.twig");
+", "admin/blog/edit.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\admin\\blog\\edit.html.twig");
     }
 }

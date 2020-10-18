@@ -46,6 +46,7 @@ class BlogController extends AbstractController
      * Content-Type header for the response.
      * See https://symfony.com/doc/current/routing.html#special-parameters
      */
+
     public function index(Request $request, int $page, string $_format, PostRepository $posts, TagRepository $tags): Response
     {
         $tag = null;
@@ -54,12 +55,27 @@ class BlogController extends AbstractController
         }
         $latestPosts = $posts->findLatest($page, $tag);
 
+        // Part with page view counter
+        $counter_array = array();
+        $counter_value = 0;
+        $opened_file = fopen("C:\Users\Veteran\symfony_task\Symfony-framework-demo\src\Controller\pageCount.ini", "r") or die("It was unable to open this file");
+        while(!feof($opened_file))
+        {
+            $line = fgets($opened_file);
+            $line = explode("=", $line);
+            array_push($counter_array, $line[0], $line[1]);
+        }
+        fclose($opened_file);
+
+        
+
         // Every template name also has two extensions that specify the format and
         // engine for that template.
         // See https://symfony.com/doc/current/templates.html#template-naming
         return $this->render('blog/index.'.$_format.'.twig', [
             'paginator' => $latestPosts,
             'tagName' => $tag ? $tag->getName() : null,
+            'counter' => $counter_value,
         ]);
     }
 
@@ -167,4 +183,73 @@ class BlogController extends AbstractController
 
         return $this->json($results);
     }
+
+    public function write_php_ini($array, $file = "pageCounts.ini")
+    {
+        $ini = parse_ini_file("pageCount.ini");
+        $res = array();
+        foreach($array as $key => $val)
+        {
+            if(is_array($val))
+            {
+                $res[] = "[$key]";
+                foreach($val as $skey => $sval) $res[] = "$skey = ".(is_numeric($sval) ? $sval : '"'.$sval.'"');
+            }
+            else $res[] = "$key = ".(is_numeric($val) ? $val : '"'.$val.'"');
+        }
+        safefilerewrite($file, implode("\r\n", $res));
+    }
+
+    function safefilerewrite($fileName, $dataToSave)
+    {    
+        if ($fp = fopen($fileName, 'w'))
+        {
+            $startTime = microtime(TRUE);
+            do
+            {   
+                $canWrite = flock($fp, LOCK_EX);
+                // If lock not obtained sleep for 0 - 100 milliseconds, to avoid collision and CPU load
+                if(!$canWrite) usleep(round(rand(0, 100)*1000));
+            } while ((!$canWrite)and((microtime(TRUE)-$startTime) < 5));
+
+            //file was locked so now we can store information
+            if ($canWrite)
+            {            
+                fwrite($fp, $dataToSave);
+                flock($fp, LOCK_UN);
+            }
+            fclose($fp);
+        }
+    }
+
+    public function read_ini_file($file = "pageCount.ini", PostRepository $posts)
+    {
+        $opened_file = fopen($file, "r") or die("It was unable to open this file");
+
+        while(!feof($opened_file))
+        {
+            $line = fgets($opened_file);
+            $line = explode("=", $line);
+            $counter_value = 0;
+
+            $tag = null;
+            if ($request->query->has('tag')) {
+                $tag = $tags->findOneBy(['name' => $request->query->get('tag')]);
+            }
+            $latestPosts = $posts->findLatest($page, $tag);
+
+            foreach ($foundPosts as $post)
+            {
+                if ($post->getTitle() == $line[0])
+                {
+                    $counter_value = $line[1];
+                    return $this->render('blog/index.'.$_format.'.twig', [
+                        'counter' => $counter_value,
+                    ]); 
+                }
+            }
+
+        }
+    }
 }
+

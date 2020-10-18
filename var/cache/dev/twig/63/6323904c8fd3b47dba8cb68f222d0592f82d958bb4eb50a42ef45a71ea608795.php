@@ -290,6 +290,6 @@ class __TwigTemplate_bd9d597bb80bb884af93af96bf6a4368b64ab585abc9592a27b961a6859
 
     {{ show_source_code(_self) }}
 {% endblock %}
-", "admin/blog/index.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\admin\\blog\\index.html.twig");
+", "admin/blog/index.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\admin\\blog\\index.html.twig");
     }
 }

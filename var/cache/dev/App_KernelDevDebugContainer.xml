@@ -5610,7 +5610,7 @@
         <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.hM478IF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.pAdot4k" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\BlogController::delete" type="service" id=".service_locator.A2a9FbN"/>
@@ -5621,6 +5621,7 @@
         <argument key="App\Controller\BlogController::commentNew" type="service" id=".service_locator.Sd9SChb"/>
         <argument key="App\Controller\BlogController::index" type="service" id=".service_locator.DXcXSsX"/>
         <argument key="App\Controller\BlogController::postShow" type="service" id=".service_locator.A2a9FbN"/>
+        <argument key="App\Controller\BlogController::read_ini_file" type="service" id=".service_locator.3Q_vHjc"/>
         <argument key="App\Controller\BlogController::search" type="service" id=".service_locator.3Q_vHjc"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.IKb2hHY"/>
         <argument key="App\Controller\UserController::changePassword" type="service" id=".service_locator.1d_X9dd"/>
@@ -5638,6 +5639,7 @@
         <argument key="App\Controller\BlogController:commentNew" type="service" id=".service_locator.Sd9SChb"/>
         <argument key="App\Controller\BlogController:index" type="service" id=".service_locator.DXcXSsX"/>
         <argument key="App\Controller\BlogController:postShow" type="service" id=".service_locator.A2a9FbN"/>
+        <argument key="App\Controller\BlogController:read_ini_file" type="service" id=".service_locator.3Q_vHjc"/>
         <argument key="App\Controller\BlogController:search" type="service" id=".service_locator.3Q_vHjc"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.IKb2hHY"/>
         <argument key="App\Controller\UserController:changePassword" type="service" id=".service_locator.1d_X9dd"/>
@@ -6114,12 +6116,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.hM478IF"/>
+      <argument type="service" id=".service_locator.pAdot4k"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.hM478IF"/>
+      <argument type="service" id=".service_locator.pAdot4k"/>
     </service>
     <service id=".errored..service_locator.beq5mCo.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.C9JCBPC.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
@@ -6518,7 +6520,7 @@
     <service id="html_sanitizer" alias="html_sanitizer.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.hM478IF"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.pAdot4k"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
     <service id="Psr\Log\LoggerInterface $cacheLogger" alias="monolog.logger.cache"/>

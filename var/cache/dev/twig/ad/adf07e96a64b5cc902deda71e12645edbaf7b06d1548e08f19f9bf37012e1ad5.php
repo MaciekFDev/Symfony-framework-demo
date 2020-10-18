@@ -155,6 +155,6 @@ class __TwigTemplate_d2633971e9722e1a6e5505c9de6e19a545f5feb9cd3608a3732287b0d3a
         </span>
     </div>
 {% endblock %}
-", "form/fields.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\form\\fields.html.twig");
+", "form/fields.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\form\\fields.html.twig");
     }
 }

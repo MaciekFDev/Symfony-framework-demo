@@ -711,6 +711,6 @@ class __TwigTemplate_f020fe22d24f3a6a7723c3d130157116ff69a12b06f777b55c6cb5a604d
         <!-- Page rendered on {{ 'now'|format_datetime('long', 'long', '', 'UTC') }} -->
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\base.html.twig");
     }
 }
