@@ -75,6 +75,9 @@ class PostType extends AbstractType
                 'label' => 'label.tags',
                 'required' => false,
             ])
+            ->add('viewCounter', null, [
+                'label' => 'Licznik wyświetleń'
+            ])
             // form events let you modify information or fields at different steps
             // of the form handling process.
             // See https://symfony.com/doc/current/form/events.html

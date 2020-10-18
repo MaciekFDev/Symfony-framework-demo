@@ -120,7 +120,7 @@ class Post
      *  @var int
      * 
     **/
-    public $viewcounter = 0;
+    public $viewcounter = 2;
 
     public function __construct()
     {

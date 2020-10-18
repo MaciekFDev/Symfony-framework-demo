@@ -90,11 +90,15 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("title.edit_post", ["%id%" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 6, $this->source); })()), "id", [], "any", false, false, false, 6)]), "html", null, true);
         echo "</h1>
 
+    <input type = \"number\"
+    id = post.id
+    value = post.viewcounter />
+
     ";
-        // line 8
-        echo twig_include($this->env, $context, "admin/blog/_form.html.twig", ["form" =>         // line 9
-(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), "button_label" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.save"), "include_back_to_home_link" => true], false);
         // line 12
+        echo twig_include($this->env, $context, "admin/blog/_form.html.twig", ["form" =>         // line 13
+(isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "button_label" => $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.save"), "include_back_to_home_link" => true], false);
+        // line 16
         echo "
 ";
         
@@ -105,7 +109,7 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
 
     }
 
-    // line 15
+    // line 19
     public function block_sidebar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -115,14 +119,14 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 16
+        // line 20
         echo "    <div class=\"section\">
         <a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 17, $this->source); })()), "id", [], "any", false, false, false, 17)]), "html", null, true);
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 21, $this->source); })()), "id", [], "any", false, false, false, 21)]), "html", null, true);
         echo "\" class=\"btn btn-lg btn-block btn-success\">
             <i class=\"fa fa-eye\" aria-hidden=\"true\"></i> ";
-        // line 18
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.show_post"), "html", null, true);
         echo "
         </a>
@@ -130,18 +134,18 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
 
     <div class=\"section actions\">
         ";
-        // line 23
-        echo twig_include($this->env, $context, "admin/blog/_delete_form.html.twig", ["post" => (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 23, $this->source); })())], false);
+        // line 27
+        echo twig_include($this->env, $context, "admin/blog/_delete_form.html.twig", ["post" => (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 27, $this->source); })())], false);
         echo "
     </div>
 
     ";
-        // line 26
+        // line 30
         $this->displayParentBlock("sidebar", $context, $blocks);
         echo "
 
     ";
-        // line 28
+        // line 32
         echo $this->extensions['App\Twig\SourceCodeExtension']->showSourceCode($this->env, $this->getTemplateName());
         echo "
 ";
@@ -165,7 +169,7 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
 
     public function getDebugInfo()
     {
-        return array (  145 => 28,  140 => 26,  134 => 23,  126 => 18,  122 => 17,  119 => 16,  109 => 15,  98 => 12,  96 => 9,  95 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  149 => 32,  144 => 30,  138 => 27,  130 => 22,  126 => 21,  123 => 20,  113 => 19,  102 => 16,  100 => 13,  99 => 12,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -176,6 +180,10 @@ class __TwigTemplate_e11397a25e57d99a05e7c7c51a0604ab0c686c4f87f25c936d44e0b751c
 
 {% block main %}
     <h1>{{ 'title.edit_post'|trans({'%id%': post.id}) }}</h1>
+
+    <input type = \"number\"
+    id = post.id
+    value = post.viewcounter />
 
     {{ include('admin/blog/_form.html.twig', {
         form: form,
