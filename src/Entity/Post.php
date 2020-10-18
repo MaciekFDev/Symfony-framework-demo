@@ -115,6 +115,13 @@ class Post
      */
     private $tags;
 
+    // Variable will be used to store informations about particular posts' view score 
+    /**
+     *  @var int
+     * 
+    **/
+    public $viewcounter = 0;
+
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
@@ -222,5 +229,15 @@ class Post
     public function getTags(): Collection
     {
         return $this->tags;
+    }
+
+    public function getViewCounter(): ?int
+    {
+        return $this->viewcounter;
+    }
+
+    public function setViewCounter(int $value): void
+    {
+        $this->viewcounter = $value;
     }
 }

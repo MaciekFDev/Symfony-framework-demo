@@ -14,7 +14,7 @@
             <p class="post-metadata">
                 <span class="metadata"><i class="fa fa-calendar"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
                 <span class="metadata"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
-                <span class="metadata"><i class="fa fa-heart"></i>{{ 1 }}</span>
+                <span class="metadata"><i class="fa fa-heart"></i>{{ post.viewcounter }}</span>
             </p>
 
             <p>{{ post.summary }}</p>

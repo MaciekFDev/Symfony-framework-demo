@@ -101,7 +101,7 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
         echo "</span>
         <span class=\"metadata\"><i class=\"fa fa-heart\"></i>";
         // line 11
-        echo 1;
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 11, $this->source); })()), "viewcounter", [], "any", false, false, false, 11), "html", null, true);
         echo "</span>
     </p>
 
@@ -289,7 +289,7 @@ class __TwigTemplate_eacf3cf3c813a23c16efb7c9750cb432d348c5a00fba14c353337a14a00
     <p class=\"post-metadata\">
         <span class=\"metadata\"><i class=\"fa fa-calendar\"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
         <span class=\"metadata\"><i class=\"fa fa-user\"></i> {{ post.author.fullName }}</span>
-        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ 1 }}</span>
+        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ post.viewcounter }}</span>
     </p>
 
     {{ post.content|markdown_to_html|sanitize_html }}

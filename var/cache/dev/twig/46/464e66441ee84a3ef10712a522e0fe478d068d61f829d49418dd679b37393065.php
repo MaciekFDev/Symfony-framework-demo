@@ -129,7 +129,7 @@ class __TwigTemplate_b567699c840719c6f8ed04fe96c5bd74b4eff2d76aca8a75a0291a90b47
             echo "</span>
                 <span class=\"metadata\"><i class=\"fa fa-heart\"></i>";
             // line 17
-            echo 1;
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "viewcounter", [], "any", false, false, false, 17), "html", null, true);
             echo "</span>
             </p>
 
@@ -319,7 +319,7 @@ $context["i"], 1)) || (0 === twig_compare($context["i"], 2))) || (0 === twig_com
             <p class=\"post-metadata\">
                 <span class=\"metadata\"><i class=\"fa fa-calendar\"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
                 <span class=\"metadata\"><i class=\"fa fa-user\"></i> {{ post.author.fullName }}</span>
-                <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ 1 }}</span>
+                <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ post.viewcounter }}</span>
             </p>
 
             <p>{{ post.summary }}</p>
