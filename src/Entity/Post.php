@@ -120,7 +120,7 @@ class Post
      *  @var int
      * 
     **/
-    public $viewcounter;
+    private $viewcounter = 0;
 
     public function __construct()
     {
@@ -240,5 +240,10 @@ class Post
     public function setViewCounter(int $value): void
     {
         $this->viewcounter = $value;
+    }
+
+    public function incrementViewCounter(): void
+    {
+        $this->viewcounter += 1;
     }
 }
