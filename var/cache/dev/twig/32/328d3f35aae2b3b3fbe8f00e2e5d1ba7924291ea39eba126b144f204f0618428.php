@@ -99,24 +99,28 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
         // line 10
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 10, $this->source); })()), "author", [], "any", false, false, false, 10), "fullName", [], "any", false, false, false, 10), "html", null, true);
         echo "</span>
+        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>";
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 11, $this->source); })()), "viewcounter", [], "any", false, false, false, 11), "html", null, true);
+        echo "</span>
     </p>
 
     <div class=\"well\">
         <p class=\"m-b-0\"><strong>";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label.summary"), "html", null, true);
         echo "</strong>: ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 14, $this->source); })()), "summary", [], "any", false, false, false, 14), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 15, $this->source); })()), "summary", [], "any", false, false, false, 15), "html", null, true);
         echo "</p>
     </div>
 
     ";
-        // line 17
-        echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 17, $this->source); })()), "content", [], "any", false, false, false, 17)));
+        // line 18
+        echo $this->extensions['HtmlSanitizer\Bundle\Twig\TwigExtension']->sanitize($this->env->getRuntime('Twig\Extra\Markdown\MarkdownRuntime')->convert(twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 18, $this->source); })()), "content", [], "any", false, false, false, 18)));
         echo "
 
     ";
-        // line 19
+        // line 20
         echo twig_include($this->env, $context, "blog/_post_tags.html.twig");
         echo "
 ";
@@ -128,7 +132,7 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
 
     }
 
-    // line 22
+    // line 23
     public function block_sidebar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -138,14 +142,14 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sidebar"));
 
-        // line 23
+        // line 24
         echo "    <div class=\"section\">
         <a href=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24)]), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_post_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 25, $this->source); })()), "id", [], "any", false, false, false, 25)]), "html", null, true);
         echo "\" class=\"btn btn-lg btn-block btn-success\">
             <i class=\"fa fa-edit\" aria-hidden=\"true\"></i> ";
-        // line 25
+        // line 26
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("action.edit_contents"), "html", null, true);
         echo "
         </a>
@@ -153,18 +157,18 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
 
     <div class=\"section\">
         ";
-        // line 30
-        echo twig_include($this->env, $context, "admin/blog/_delete_form.html.twig", ["post" => (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 30, $this->source); })())], false);
+        // line 31
+        echo twig_include($this->env, $context, "admin/blog/_delete_form.html.twig", ["post" => (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 31, $this->source); })())], false);
         echo "
     </div>
 
     ";
-        // line 33
+        // line 34
         $this->displayParentBlock("sidebar", $context, $blocks);
         echo "
 
     ";
-        // line 35
+        // line 36
         echo $this->extensions['App\Twig\SourceCodeExtension']->showSourceCode($this->env, $this->getTemplateName());
         echo "
 ";
@@ -188,7 +192,7 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
 
     public function getDebugInfo()
     {
-        return array (  168 => 35,  163 => 33,  157 => 30,  149 => 25,  145 => 24,  142 => 23,  132 => 22,  120 => 19,  115 => 17,  107 => 14,  100 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  172 => 36,  167 => 34,  161 => 31,  153 => 26,  149 => 25,  146 => 24,  136 => 23,  124 => 20,  119 => 18,  111 => 15,  104 => 11,  100 => 10,  96 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +207,7 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
     <p class=\"post-metadata\">
         <span class=\"metadata\"><i class=\"fa fa-calendar\"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
         <span class=\"metadata\"><i class=\"fa fa-user\"></i> {{ post.author.fullName }}</span>
+        <span class=\"metadata\"><i class=\"fa fa-heart\"></i>{{ post.viewcounter }}</span>
     </p>
 
     <div class=\"well\">
@@ -229,6 +234,6 @@ class __TwigTemplate_cd6a03c834e48ddeac30175b570c1b5e966c224292969ac62c3d61fc6a5
 
     {{ show_source_code(_self) }}
 {% endblock %}
-", "admin/blog/show.html.twig", "C:\\Users\\Veteran\\my_project\\templates\\admin\\blog\\show.html.twig");
+", "admin/blog/show.html.twig", "C:\\Users\\Veteran\\symfony_task\\Symfony-framework-demo\\templates\\admin\\blog\\show.html.twig");
     }
 }

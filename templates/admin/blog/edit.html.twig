@@ -5,10 +5,6 @@
 {% block main %}
     <h1>{{ 'title.edit_post'|trans({'%id%': post.id}) }}</h1>
 
-    <input type = "number"
-    id = post.id
-    value = post.viewcounter />
-
     {{ include('admin/blog/_form.html.twig', {
         form: form,
         button_label: 'action.save'|trans,

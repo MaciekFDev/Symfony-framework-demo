@@ -120,13 +120,14 @@ class Post
      *  @var int
      * 
     **/
-    public $viewcounter = 2;
+    public $viewcounter;
 
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
         $this->tags = new ArrayCollection();
+        $this->viewcounter = 0;
     }
 
     public function getId(): ?int
