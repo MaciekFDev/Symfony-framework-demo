@@ -55,27 +55,12 @@ class BlogController extends AbstractController
         }
         $latestPosts = $posts->findLatest($page, $tag);
 
-        // Part with page view counter
-        $counter_array = array();
-        $counter_value = 0;
-        $opened_file = fopen("C:\Users\Veteran\symfony_task\Symfony-framework-demo\src\Controller\pageCount.ini", "r") or die("It was unable to open this file");
-        while(!feof($opened_file))
-        {
-            $line = fgets($opened_file);
-            $line = explode("=", $line);
-            array_push($counter_array, $line[0], $line[1]);
-        }
-        fclose($opened_file);
-
-        
-
         // Every template name also has two extensions that specify the format and
         // engine for that template.
         // See https://symfony.com/doc/current/templates.html#template-naming
         return $this->render('blog/index.'.$_format.'.twig', [
             'paginator' => $latestPosts,
             'tagName' => $tag ? $tag->getName() : null,
-            'counter' => $counter_value,
         ]);
     }
 
