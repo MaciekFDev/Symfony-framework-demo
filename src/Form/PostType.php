@@ -15,6 +15,7 @@ use App\Entity\Post;
 use App\Form\Type\DateTimePickerType;
 use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
@@ -75,8 +76,9 @@ class PostType extends AbstractType
                 'label' => 'label.tags',
                 'required' => false,
             ])
-            ->add('viewCounter', null, [
-                'label' => 'Licznik wyświetleń'
+            ->add('viewCounter', NumberType::class, [
+                'label' => 'Licznik wyświetleń',
+                'required' => true,
             ])
             // form events let you modify information or fields at different steps
             // of the form handling process.

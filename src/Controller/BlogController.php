@@ -25,6 +25,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Cookie;
 
 /**
  * Controller used to manage blog contents in the public part of the site.
@@ -72,7 +73,7 @@ class BlogController extends AbstractController
      * value given in the route.
      * See https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
      */
-    public function postShow(Post $post): Response
+    public function postShow(Request $request, Post $post): Response
     {
         // Symfony's 'dump()' function is an improved version of PHP's 'var_dump()' but
         // it's not available in the 'prod' environment to prevent leaking sensitive information.
@@ -80,8 +81,32 @@ class BlogController extends AbstractController
         // have enabled the DebugBundle. Uncomment the following line to see it in action:
         //
         // dump($post, $this->getUser(), new \DateTime());
+            $cookieName = 'post-'. $post->getId();
+            $response = new Response();
+            if(!$this->wasCounterIncreased($request, $cookieName))
+            {
+                $post->incrementViewCounter();
+                $temp = $this->getDoctrine()->getManager();
+                $temp->persist($post);
+                $temp->flush();
+                $response = $this->setCounterWasIncreased($response, $cookieName);
+            }
 
-        return $this->render('blog/post_show.html.twig', ['post' => $post]);
+
+        return $this->render('blog/post_show.html.twig', ['post' => $post], $response);
+    }
+
+    private function wasCounterIncreased(Request $request, string $cookieName): bool
+    {
+        
+        return (bool) $request->cookies->get($cookieName) === true;
+    }
+
+    private function setCounterWasIncreased(Response $response, string $cookieName): Response
+    {
+        $cookie = new Cookie($cookieName, true);
+        $response->headers->setCookie($cookie);
+        return $response;
     }
 
     /**

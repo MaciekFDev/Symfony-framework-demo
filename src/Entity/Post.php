@@ -119,15 +119,15 @@ class Post
     /**
      *  @var int
      * 
+     * @ORM\Column(type="integer")
     **/
-    private $viewcounter = 0;
+    private $viewcounter;
 
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
         $this->tags = new ArrayCollection();
-        $this->viewcounter = 0;
     }
 
     public function getId(): ?int
